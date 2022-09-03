@@ -2,28 +2,22 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+# installing requirements:
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+`pip3 install --upgrade odrive`
 
-### How do I get set up? ###
+# motor setup
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+AT2814 motors configuration is 12N14P kv900 has 14 permanent poles to we do:
+`odrv0.axis0.motor.config.pole_pairs = 7`
 
-### Contribution guidelines ###
+`odrv0.axis0.motor.config.torque_constant = 8.27/900`
 
-* Writing tests
-* Code review
-* Other guidelines
+`odrv0.axis0.motor.config.motor_type = MOTOR_TYPE_HIGH_CURRENT`
 
-### Who do I talk to? ###
+`odrv0.axis0.encoder.config.cpr = 16384`
 
-* Repo owner or admin
-* Other community or team contact
+
+For debugging:
+`dump_errors()`
+

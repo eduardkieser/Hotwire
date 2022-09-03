@@ -1,0 +1,241 @@
+{
+    "axis0": {
+      "acim_estimator": {
+        "config": {
+          "slip_velocity": 14.706000328063965
+        }
+      },
+      "config": {
+        "can": {
+          "encoder_rate_ms": 0,
+          "heartbeat_rate_ms": 0,
+          "is_extended": false,
+          "node_id": 3
+        },
+        "dir_gpio_pin": 0,
+        "enable_sensorless_mode": false,
+        "enable_step_dir": false,
+        "enable_watchdog": false,
+        "startup_closed_loop_control": false,
+        "startup_encoder_index_search": false,
+        "startup_encoder_offset_calibration": false,
+        "startup_homing": false,
+        "startup_motor_calibration": false,
+        "step_dir_always_on": false,
+        "step_gpio_pin": 0,
+        "watchdog_timeout": 0
+      },
+      "encoder": {
+        "config": {
+          "abs_spi_cs_gpio_pin": 4
+        }
+      },
+      "max_endstop": {
+        "config": {
+          "enabled": false,
+          "gpio_num": 0
+        }
+      },
+      "mechanical_brake": {
+        "config": {
+          "gpio_num": 0
+        }
+      },
+      "min_endstop": {
+        "config": {
+          "gpio_num": 0
+        }
+      },
+      "motor": {
+        "config": {
+          "pre_calibrated": true
+        },
+        "fet_thermistor": {
+          "config": {
+            "enabled": true,
+            "temp_limit_lower": 100,
+            "temp_limit_upper": 120
+          }
+        },
+        "motor_thermistor": {
+          "config": {
+            "enabled": false,
+            "gpio_pin": 0
+          }
+        }
+      }
+    },
+    "axis1": {
+      "acim_estimator": {
+        "config": {
+          "slip_velocity": 14.706
+        }
+      },
+      "config": {
+        "can": {
+          "encoder_rate_ms": 0,
+          "heartbeat_rate_ms": 100,
+          "is_extended": false,
+          "node_id": 1
+        },
+        "dir_gpio_pin": 0,
+        "enable_sensorless_mode": false,
+        "enable_step_dir": false,
+        "enable_watchdog": false,
+        "startup_closed_loop_control": true,
+        "startup_encoder_index_search": false,
+        "startup_encoder_offset_calibration": false,
+        "startup_homing": false,
+        "startup_motor_calibration": false,
+        "step_dir_always_on": false,
+        "step_gpio_pin": 0,
+        "watchdog_timeout": 0
+      },
+      "controller": {
+        "config": {
+          "anticogging": {
+            "anticogging_enabled": false
+          },
+          "circular_setpoint_range": 1,
+          "circular_setpoints": false,
+          "control_mode": 3,
+          "electrical_power_bandwidth": 20,
+          "enable_gain_scheduling": false,
+          "enable_overspeed_error": false,
+          "enable_torque_mode_vel_limit": false,
+          "enable_vel_limit": true,
+          "homing_speed": 0.25,
+          "inertia": 0,
+          "input_mode": 1,
+          "load_encoder_axis": 1,
+          "mechanical_power_bandwidth": 20,
+          "pos_gain": 25,
+          "spinout_electrical_power_threshold": 10,
+          "spinout_mechanical_power_threshold": -10,
+          "steps_per_circular_range": 1024,
+          "torque_mirror_ratio": 0,
+          "torque_ramp_rate": 0.01,
+          "vel_gain": 0.007,
+          "vel_integrator_gain": 0.035,
+          "vel_limit": 64,
+          "vel_limit_tolerance": 9999,
+          "vel_ramp_rate": 10000
+        }
+      },
+      "encoder": {
+        "config": {
+          "abs_spi_cs_gpio_pin": 0,
+          "cpr": 16384,
+          "direction": -1,
+          "mode": 257,
+          "pre_calibrated": false,
+          "sincos_gpio_pin_cos": 0,
+          "sincos_gpio_pin_sin": 0
+        }
+      },
+      "max_endstop": {
+        "config": {
+          "enabled": false,
+          "gpio_num": 0
+        }
+      },
+      "mechanical_brake": {
+        "config": {
+          "gpio_num": 0
+        }
+      },
+      "min_endstop": {
+        "config": {
+          "enabled": false,
+          "gpio_num": 0
+        }
+      },
+      "motor": {
+        "config": {
+          "I_leak_max": 0.1,
+          "R_wL_FF_enable": false,
+          "acim_autoflux_attack_gain": 10,
+          "acim_autoflux_decay_gain": 1,
+          "acim_autoflux_enable": false,
+          "acim_autoflux_min_Id": 10,
+          "acim_gain_min_flux": 10,
+          "bEMF_FF_enable": false,
+          "calibration_current": 5,
+          "current_control_bandwidth": 1000,
+          "current_lim": 20,
+          "current_lim_margin": 9999,
+          "dc_calib_tau": 0.2,
+          "inverter_temp_limit_lower": 100,
+          "inverter_temp_limit_upper": 120,
+          "motor_type": 0,
+          "pole_pairs": 7,
+          "pre_calibrated": false,
+          "requested_current_range": 60,
+          "resistance_calib_max_voltage": 2,
+          "torque_constant": 0.0092,
+          "torque_lim": 9999
+        },
+        "fet_thermistor": {
+          "config": {
+            "enabled": true,
+            "temp_limit_lower": 100,
+            "temp_limit_upper": 120
+          }
+        },
+        "motor_thermistor": {
+          "config": {
+            "enabled": false,
+            "gpio_pin": 0
+          }
+        }
+      },
+      "trap_traj": {
+        "config": {
+          "accel_limit": 5000,
+          "decel_limit": 5000,
+          "vel_limit": 20000
+        }
+      }
+    },
+    "can": {
+      "config": {
+        "baud_rate": 250000,
+        "protocol": 1
+      }
+    },
+    "config": {
+      "brake_resistance": 0.47,
+      "dc_bus_overvoltage_ramp_end": 25.68,
+      "dc_bus_overvoltage_ramp_start": 18,
+      "dc_bus_overvoltage_trip_level": 25.68,
+      "dc_bus_undervoltage_trip_level": 8,
+      "dc_max_negative_current": -10000000000,
+      "dc_max_positive_current": 9999,
+      "enable_brake_resistor": true,
+      "enable_can_a": true,
+      "enable_dc_bus_overvoltage_ramp": true,
+      "enable_i2c_a": false,
+      "enable_uart_a": false,
+      "enable_uart_b": false,
+      "enable_uart_c": false,
+      "error_gpio_pin": 0,
+      "gpio10_mode": 11,
+      "gpio11_mode": 2,
+      "gpio12_mode": 12,
+      "gpio13_mode": 12,
+      "gpio14_mode": 2,
+      "gpio15_mode": 7,
+      "gpio16_mode": 7,
+      "gpio1_mode": 0,
+      "gpio2_mode": 0,
+      "gpio3_mode": 0,
+      "gpio4_mode": 0,
+      "gpio6_mode": 0,
+      "gpio7_mode": 0,
+      "gpio8_mode": 0,
+      "gpio9_mode": 11,
+      "max_regen_current": 0,
+      "usb_cdc_protocol": 0
+    }
+  }
+  
